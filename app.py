@@ -26,15 +26,30 @@ st.markdown("""
         color: #2e7d32;
         text-align: center;
     }
-    .stAlert {
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
+    
+    /* Estilo para os Cards de Métricas (Diagnóstico e Confiança) */
     div[data-testid="stMetric"] {
-        background-color: #ffffff;
+        background-color: #ffffff; /* Fundo Branco */
         padding: 15px;
         border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         text-align: center;
+        border: 1px solid #e0e0e0;
+    }
+
+    /* Forçar cor do texto para escuro dentro do card branco */
+    div[data-testid="stMetric"] label {
+        color: #555555 !important; /* Cor do título (ex: Doença Detectada) */
+    }
+    div[data-testid="stMetric"] div[data-testid="stMetricValue"] {
+        color: #000000 !important; /* Cor do valor (ex: Pestalotiopsis) */
+    }
+    
+    /* Ajuste extra para mobile: garantir que as colunas não fiquem espremidas */
+    @media (max-width: 640px) {
+        div[data-testid="stMetric"] {
+            margin-bottom: 10px;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
