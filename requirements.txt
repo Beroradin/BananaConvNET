@@ -1,7 +1,6 @@
 streamlit
-tensorflow-cpu==2.15.0
+tensorflow-cpu
 opencv-python-headless
 numpy<2.0
 Pillow
 pandas
-h5py
